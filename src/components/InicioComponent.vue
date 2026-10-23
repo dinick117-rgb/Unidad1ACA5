@@ -43,17 +43,31 @@
 
   </section>
 
+  <div class="separador">
+  
+  </div>
+
+  <ArtistaComponent />
+
+  <div class="separador">
+    
+  </div>
+
+  <AlbumComponent />
+
 </template>
 
 
 <script setup lang="ts">
+
 
 import { ref } from 'vue'
 
 import imagenArriba from '../assets/grammy2.png'
 import imagenIzquierda from '../assets/Grammy3.png'
 import imagenDerecha from '../assets/Grammy4.png'
-
+import ArtistaComponent from '../components/ArtistaComponent.vue'
+import AlbumComponent from '../components/AlbumComponent.vue'
 const mensaje = ref('')
 
 function mostrarMensaje() {
@@ -207,6 +221,13 @@ button:hover {
 
   right: 0;
 
+}
+
+.separador {
+  width: 100%;
+  background-color: #eafe37;
+  padding: 15px 0;
+  margin-top: 20px;
 }
 
 </style>

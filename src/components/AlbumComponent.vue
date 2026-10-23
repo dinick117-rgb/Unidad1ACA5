@@ -1,5 +1,5 @@
-```vue
 <template>
+  
   <section id="Albumes">
 
     <h2>Álbum del Año</h2>
@@ -243,7 +243,6 @@ const albumes = ref<Album[]>([
 ])
 
 
-// ÁLBUMES QUE SE MUESTRAN EN EL CARRUSEL
 const albumesVisibles = computed(() => {
 
   return albumes.value.slice(
@@ -254,7 +253,6 @@ const albumesVisibles = computed(() => {
 })
 
 
-// BOTÓN SIGUIENTE
 function siguiente() {
 
   if (
@@ -268,8 +266,6 @@ function siguiente() {
 
 }
 
-
-// BOTÓN ANTERIOR
 function anterior() {
 
   if (posicion.value > 0) {
@@ -280,16 +276,12 @@ function anterior() {
 
 }
 
-
-// MOSTRAR INFORMACIÓN DEL ÁLBUM
 function mostrarAlbum(album: Album) {
 
   albumSeleccionado.value = album
 
 }
 
-
-// CERRAR INFORMACIÓN
 function cerrarAlbum() {
 
   albumSeleccionado.value = null
@@ -348,8 +340,6 @@ function cerrarAlbum() {
 }
 
 
-/* INFORMACIÓN DEL ÁLBUM */
-
 .detalle-album {
   display: flex;
   align-items: center;
@@ -376,8 +366,6 @@ function cerrarAlbum() {
 }
 
 
-/* RESPONSIVO PARA CELULAR */
-
 @media (max-width: 800px) {
 
   .carrusel {
@@ -402,4 +390,3 @@ function cerrarAlbum() {
 }
 
 </style>
-```

@@ -1,24 +1,72 @@
 <template>
-
   <header class="header">
+
     <RouterLink to="/" class="marca">
-      SpheraSonoro
+      <img
+        src="../assets/logo.png"
+        alt="Logo SpheraSonoro"
+        class="logo"
+      >
+      <span>SpheraSonoro</span>
     </RouterLink>
 
     <nav aria-label="Navegación principal">
       <RouterLink to="/">Inicio</RouterLink>
       <RouterLink to="/artistas">Artistas</RouterLink>
-      <RouterLink to="/albumes">Álbumes</RouterLink>
       <RouterLink to="/merch">Merch</RouterLink>
       <RouterLink to="/calendario">Calendario</RouterLink>
+      <RouterLink to="/sesion">Iniciar Sesión</RouterLink>
+      <RouterLink to="/carrito" class="carrito-header">
+    <ShoppingCart :size="25" :strokeWidth="2" />
+
+    <span v-if="cantidadProductos > 0" class="contador-carrito">
+        {{ cantidadProductos }}
+    </span>
+</RouterLink>
     </nav>
 
   </header>
-
 </template>
 
+<script setup lang="ts">
+import { ShoppingCart } from 'lucide-vue-next'
+import { useCarrito } from "../composables/useCarrito"
+
+const { cantidadProductos } = useCarrito()
+
+</script>
 
 <style scoped>
+.carrito-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #222;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.carrito-header:hover {
+    color: #fe4f76;
+}
+
+.contador-carrito {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    background: #fe4f76;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -38,7 +86,12 @@
   flex-wrap: wrap;
 }
 
+/* LOGO Y NOMBRE */
 .marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
   color: #000;
   text-decoration: none;
   font-size: clamp(2rem, 4vw, 3.5rem);
@@ -46,6 +99,13 @@
   line-height: 1.1;
 }
 
+.logo {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+}
+
+/* NAVEGACIÓN */
 nav {
   display: flex;
   align-items: center;
@@ -58,6 +118,7 @@ nav a {
   color: #a64dff;
   text-decoration: none;
   font-size: 1.05rem;
+  transition: 0.3s;
 }
 
 nav a:hover,
@@ -66,14 +127,22 @@ nav a.router-link-exact-active {
   text-underline-offset: 5px;
 }
 
+/* RESPONSIVE */
 @media (max-width: 700px) {
+
   .header {
     justify-content: center;
     text-align: center;
   }
 
+  .marca {
+    justify-content: center;
+  }
+
   nav {
     gap: 14px;
   }
+
 }
+
 </style>

@@ -1,5 +1,6 @@
 <template>
     <form class="message-box" @submit.prevent="enviarMensaje">
+
         <input
             v-model="mensaje"
             type="text"
@@ -15,6 +16,7 @@
         >
             ➤
         </button>
+
     </form>
 </template>
 
@@ -40,23 +42,25 @@ function enviarMensaje() {
 <style scoped>
 .message-box {
     display: flex;
-    gap: 8px;
-    padding: 12px;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 20px;
     border-top: 1px solid #e7dcef;
     background: #ffffff;
     border-radius: 0 0 16px 16px;
+    box-sizing: border-box;
 }
 
 .message-box input {
     flex: 1;
     min-width: 0;
-    padding: 12px;
+    padding: 15px 18px;
     border: 1px solid #ddd2e9;
-    border-radius: 22px;
+    border-radius: 25px;
     outline: none;
     color: #241b30;
     background: #ffffff;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .message-box input:focus {
@@ -64,15 +68,21 @@ function enviarMensaje() {
 }
 
 .message-box button {
-    width: 42px;
-    height: 42px;
+    width: 48px;
+    height: 48px;
     flex-shrink: 0;
     border: none;
     border-radius: 50%;
     background: #a64dff;
     color: white;
-    font-size: 21px;
+    font-size: 22px;
     cursor: pointer;
+    transition: 0.2s;
+}
+
+.message-box button:hover:not(:disabled) {
+    background: #8d35df;
+    transform: scale(1.05);
 }
 
 .message-box button:disabled {

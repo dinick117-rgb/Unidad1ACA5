@@ -25,15 +25,19 @@ defineProps<{
 <style scoped>
 .mensaje {
     max-width: 85%;
-    padding: 12px 15px;
-    margin-bottom: 12px;
-    border-radius: 16px;
+    width: fit-content;
+    padding: 16px 20px;
+    margin: 8px 5px 16px;
+    border-radius: 18px;
     overflow-wrap: anywhere;
+    box-sizing: border-box;
 }
 
 .mensaje p {
     margin: 0;
-    line-height: 1.45;
+    line-height: 1.6;
+    font-size: 15px;
+    letter-spacing: 0.2px;
 }
 
 .mensaje-usuario {
@@ -53,9 +57,9 @@ defineProps<{
 .mensaje-gif {
     display: block;
     width: 100%;
-    max-width: 220px;
+    max-width: 240px;
     height: auto;
-    margin-top: 10px;
-    border-radius: 10px;
+    margin-top: 14px;
+    border-radius: 12px;
 }
 </style>

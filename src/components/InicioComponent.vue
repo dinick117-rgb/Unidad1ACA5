@@ -35,8 +35,10 @@
 
   </section>
 
-  <!-- DESCRIPCIÓN DEL FESTIVAL -->
-  <section class="sobre-festival">
+    <!-- DESCRIPCIÓN DEL FESTIVAL -->
+<section class="sobre-festival">
+
+  <div class="sobre-texto">
 
     <span class="etiqueta-seccion">CONOCE SPHERASOUND</span>
 
@@ -64,6 +66,13 @@
       <span>MILES DE SONIDOS.</span>
       <span>INFINITAS EXPERIENCIAS.</span>
     </div>
+
+  </div>
+
+  <div class="sobre-imagen">
+   
+    <img :src="fotoInicio" class="fotoinicio"alt="Experiencia SpheraSonoro">
+  </div>
 
   </section>
 
@@ -111,6 +120,7 @@
 import { ref } from 'vue'
 
 import imagenFondo from '../assets/festival.jpg'
+import fotoInicio from '../assets/fotoinicio.jpg'
 import ArtistaComponent from '../components/ArtistaComponent.vue'
 import SimbologiaComponent from '../components/SimbologiaComponent.vue'
 import MomentsComponent from '../components/MomentsComponent.vue'
@@ -403,6 +413,79 @@ button:hover {
     font-size: 14px;
   }
 
+}
+
+/* DESCRIPCIÓN DEL FESTIVAL */
+
+.sobre-festival {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+
+  padding: 100px 8%;
+  background-color: #f1f1f1;
+}
+
+.sobre-texto {
+  text-align: left;
+}
+
+.sobre-texto .etiqueta-seccion {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.sobre-texto h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.sobre-texto h2 span {
+  display: block;
+}
+
+.sobre-texto p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.sobre-imagen {
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.sobre-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sobre-texto .frase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .sobre-festival {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 65px 7%;
+  }
+
+  .sobre-imagen {
+    height: 350px;
+  }
 }
 
 </style>

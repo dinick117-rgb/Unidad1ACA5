@@ -39,9 +39,9 @@
         </section>
 
         <section class="mensaje">
-            <h2>Una experiencia que se queda contigo.</h2>
+        
             <p>
-                Cada canción, cada escenario y cada momento forman
+                Revive los mejores momentos de la experiencia SpheraSound 2025. Cada canción, cada escenario y cada momento forman
                 parte de una historia que merece volver a vivirse.
             </p>
         </section>

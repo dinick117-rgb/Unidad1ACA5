@@ -86,6 +86,13 @@
 
   </section>
 
+    <section class="seccion-contenido">
+
+
+    <ActividadesComponent />
+
+  </section>
+
   <div class="separador"></div>
 
   <!-- ESCENARIOS -->
@@ -122,6 +129,7 @@ import { ref } from 'vue'
 import imagenFondo from '../assets/festival.jpg'
 import fotoInicio from '../assets/fotoinicio.jpg'
 import ArtistaComponent from '../components/ArtistaComponent.vue'
+import ActividadesComponent from '../components/ActividadesComponent.vue'
 import SimbologiaComponent from '../components/SimbologiaComponent.vue'
 import MomentsComponent from '../components/MomentsComponent.vue'
 

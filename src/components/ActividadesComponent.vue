@@ -7,7 +7,7 @@
       <span class="etiqueta-seccion">SPHERASOUND · 2026</span>
 
       <h2>
-        Actividades<span class="punto">.</span>
+        ACTIVIDADE<span class="punto">S</span>
       </h2>
 
       <p>
@@ -100,6 +100,19 @@
 
 import { ref, computed } from 'vue'
 import imagenActividad from '../assets/festival.jpg'
+import imagenActividad1 from '../assets/A1.jpg'
+import imagenActividad2 from '../assets/A2.jpg'
+import imagenActividad3 from '../assets/A3.jpg'
+import imagenActividad4 from '../assets/A4.jpg'
+import imagenActividad5 from '../assets/A5.jpg'
+import imagenActividad6 from '../assets/A6.jpg'
+import imagenActividad7 from '../assets/A7.jpg'
+import imagenActividad8 from '../assets/A8.jpg'
+import imagenActividad9 from '../assets/A9.jpg'
+import imagenActividad10 from '../assets/A10.jpg'
+import imagenActividad11 from '../assets/A11.jpg'
+import imagenActividad12 from '../assets/A12.jpg'
+
 
 // FILTROS POR DÍA
 const dias = [
@@ -126,7 +139,7 @@ const actividades = [
     categoria: 'FERIA',
     descripcion:
       'Comienza la experiencia SpheraSonoro y descubre todo lo que el festival tiene preparado para ti.',
-    imagen: imagenActividad
+    imagen: imagenActividad10
   },
   {
     id: 2,
@@ -138,7 +151,7 @@ const actividades = [
     categoria: 'INTERACTIVO',
     descripcion:
       'Participa en dinámicas especiales, conoce nuestras marcas participantes y disfruta de sorpresas.',
-    imagen: imagenActividad
+    imagen: imagenActividad9
   },
   {
     id: 3,
@@ -150,7 +163,7 @@ const actividades = [
     categoria: 'CREATIVIDAD',
     descripcion:
       'Explora tu lado creativo con actividades y experiencias para crear algo único.',
-    imagen: imagenActividad
+    imagen: imagenActividad8
   },
   {
     id: 4,
@@ -162,7 +175,7 @@ const actividades = [
     categoria: 'DINÁMICA',
     descripcion:
       'Pon a prueba tu suerte y participa para llevarte algunas sorpresas del festival.',
-    imagen: imagenActividad
+    imagen: imagenActividad11
   },
   {
     id: 5,
@@ -174,7 +187,7 @@ const actividades = [
     categoria: 'BEAUTY',
     descripcion:
       'Dale un toque diferente a tu estilo con espacios dedicados a la belleza y la expresión personal.',
-    imagen: imagenActividad
+    imagen: imagenActividad7
   },
   {
     id: 6,
@@ -186,7 +199,7 @@ const actividades = [
     categoria: 'FOTOGRAFÍA',
     descripcion:
       'Captura tus mejores momentos y llévate un recuerdo especial de SpheraSonoro.',
-    imagen: imagenActividad
+    imagen: imagenActividad12
   },
   {
     id: 7,
@@ -198,7 +211,7 @@ const actividades = [
     categoria: 'ENTRETENIMIENTO',
     descripcion:
       'Diviértete con diferentes juegos y retos mientras compartes la experiencia con tus amigos.',
-    imagen: imagenActividad
+    imagen: imagenActividad5
   },
   {
     id: 8,
@@ -210,7 +223,7 @@ const actividades = [
     categoria: 'MÚSICA',
     descripcion:
       'Toma el micrófono, demuestra tu talento y canta tus canciones favoritas.',
-    imagen: imagenActividad
+    imagen: imagenActividad6
   },
   {
     id: 9,
@@ -222,7 +235,7 @@ const actividades = [
     categoria: 'BIENVENIDA',
     descripcion:
       'Celebra el inicio de una nueva jornada de música, encuentros y experiencias inolvidables.',
-    imagen: imagenActividad
+    imagen: imagenActividad4
   },
   {
     id: 10,
@@ -234,7 +247,7 @@ const actividades = [
     categoria: 'MÚSICA',
     descripcion:
       'Disfruta de una selección musical para comenzar la jornada con toda la energía del festival.',
-    imagen: imagenActividad
+    imagen: imagenActividad3
   },
     {
     id: 11,
@@ -246,7 +259,7 @@ const actividades = [
     categoria: 'MÚSICA',
     descripcion:
       'Disfruta de una selección musical para comenzar la jornada con toda la energía del festival.',
-    imagen: imagenActividad
+    imagen: imagenActividad2
   },
     {
     id: 12,
@@ -258,7 +271,7 @@ const actividades = [
     categoria: 'MÚSICA',
     descripcion:
       'Disfruta de una selección musical para comenzar la jornada con toda la energía del festival.',
-    imagen: imagenActividad
+    imagen: imagenActividad1
   }
 ]
 
